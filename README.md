@@ -1,6 +1,3 @@
-# cv-interactif-aakif-adam
-# CV Dynamique de Adam AAKIF
-
 Ceci est un CV dynamique en ligne créé avec **HTML, CSS, JavaScript et Bootstrap**.
 
 ## Description
@@ -9,6 +6,7 @@ Ceci est un CV dynamique en ligne créé avec **HTML, CSS, JavaScript et Bootstr
 - Compétences avec notation par étoiles.
 - Projets avec description et liens cliquables.
 - Design responsive et moderne.
+- Version en ligne disponible ici : [Voir le CV](https://adamaakifuca.github.io/cv-interactif-aakif-adam/)
 
 ## Technologies utilisées
 - HTML5
