@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cv de Adam Aakif</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#proCard"><img src="imgx.jpeg" alt="Profil" class="smpro">Adam AAKIF</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" id="home">Home</a></li>
+          <li class="nav-item"><a class="nav-link">Expérience</a></li>
+          <li class="nav-item"><a class="nav-link">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link">Contact</a></li>
+          <li class="nav-item"><a class="nav-link">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="content-wrapper">
+      <div class="ProCard" id="proCard">
+        <img src="imgx.jpeg" alt="Profile" class="mainpro">
+        <p class="name">Adam AAKIF</p>
+        <p class="des">
+          Je suis un étudiant en deuxième année IAP à la FSSM et un développeur backend. 
+          Je travaille souvent sur l’analyse de données avec de solides compétences en Python 
+          (Pandas, NumPy, Seaborn, Matplotlib...). J’ai réalisé plusieurs projets et je fais des 
+          recherches pour combiner l’informatique avec d’autres domaines, par exemple créer des 
+          logiciels capables d’aider à construire des lois plus solides.
+        </p>
+      </div>
+
+      <div id="sectionContent" class="section-content">
+        <h2>Home</h2>
+        <p>Bienvenue sur mon CV.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>&copy; Adam AAKIF</p>
+  </footer>
+
+  <script>
+    const links = document.querySelectorAll(".nav-link");
+    const proCard = document.getElementById("proCard");
+    const content = document.getElementById("sectionContent");
+
+    links.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+
+        if (window.innerWidth > 768) {
+          proCard.style.transform = "translateX(-120px) scale(0.9)";
+        } else {
+          proCard.style.transform = "none";
+        }
+
+        const section = link.textContent.trim().toLowerCase();
+
+        if (section === "home") {
+          content.innerHTML = `<h2 style="color:white;">Home</h2><p>Bienvenue sur mon CV dynamique.</p>`;
+        } 
+        else if (section === "expérience") {
+    content.innerHTML = `
+      <div style="padding: 20px; display: flex; flex-direction: column; gap: 15px;">
+        <h2 style="font-size: 24px; font-weight: bold; color: orange; text-align: center;">
+          Expérience
+        </h2>
+        <p style="text-align: justify; font-size: 16px;">
+          Je n’ai pas encore d’expérience professionnelle, mais je continue à développer mes compétences à travers des projets personnels et des apprentissages autonomes.
+        </p>
+      </div>
+    `;
+}
+
+        else if (section === "compétences") {
+    content.innerHTML = `
+      <div style="padding: 20px; display: flex; flex-direction: column; gap: 25px; align-items: center;">
+        <h2 style="font-size: 28px; font-weight: 700; color: #ffa500; text-align: center;">
+          Compétences Techniques
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; width: 100%;">
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            Python<br><span style="color: gold; font-size: 20px;">★★★★★</span>
+          </div>
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            Pandas<br><span style="color: gold; font-size: 20px;">★★★★☆</span>
+          </div>
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            NumPy<br><span style="color: gold; font-size: 20px;">★★★★☆</span>
+          </div>
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            Seaborn<br><span style="color: gold; font-size: 20px;">★★★★☆</span>
+          </div>
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            Matplotlib<br><span style="color: gold; font-size: 20px;">★★★★☆</span>
+          </div>
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            SQLite<br><span style="color: gold; font-size: 20px;">★★★★☆</span>
+          </div>
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            FastAPI<br><span style="color: gold; font-size: 20px;">★★★☆☆</span>
+          </div>
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            Pydantic<br><span style="color: gold; font-size: 20px;">★★★★☆</span>
+          </div>
+          <div class="skills-card" style="padding: 20px; font-size: 18px; text-align: center; background: #0f2027; color: white; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            Sklearn (Régression Linéaire)<br><span style="color: gold; font-size: 20px;">★★★☆☆</span>
+          </div>
+        </div>
+      </div>
+    `;
+}
+
+
+        else if (section === "contact") {
+          content.innerHTML = `
+            <div style="padding:20px; display:flex; flex-direction:column; gap:15px; align-items:center;">
+              <h2 style="font-size:larger; font-weight:700; color:#ffa500;">Contact</h2>
+              <p style="font-size:large; font-family: 'Poppins', sans-serif;">
+                <i class="fa-solid fa-envelope"></i> Email: 
+                <a href="mailto:adamaakif23@gmail.com" style="color:#ff6b6b;">adamaakif23@gmail.com</a>
+              </p>
+              <p style="font-size:larger; font-family: 'Poppins', sans-serif;">
+                <i class="fa-brands fa-github"></i> GitHub: 
+                <a href="https://github.com/ilittleaakif" target="_blank" style="color:#ff6b6b;">github.com/ilittleaakif</a>
+              </p>
+            </div>
+          `;
+        }
+
+        else if (section === "projects") {
+    content.innerHTML = `
+      <div style="padding: 20px; display: flex; flex-direction: column; gap: 25px; align-items: center;">
+        <h2 style="font-size: 28px; font-weight: 700; color: #ffa500; text-align: center;">
+          Projets
+        </h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; width: 100%;">
+          <div style="background: #0f2027; color: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s; text-align: center;">
+            <h3 style="font-size: 22px; color: #00d2ff; margin-bottom: 10px;">Backend API - Gestion des Personnes</h3>
+            <p style="font-size: 16px; text-align: justify; margin-bottom: 15px;">
+              Une API backend développée en Python avec FastAPI et Pydantic, qui permet d'ajouter et gérer les enregistrements de personnes dans une base de données SQLite.
+            </p>
+            <a href="https://github.com/Universal-Unlimited-Unity/U3-core" target="_blank" style="color: #ffa500; font-weight: 600; text-decoration: none; font-size: 16px;">Voir le projet</a>
+          </div>
+
+          <div style="background: #0f2027; color: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: transform 0.3s; text-align: center;">
+            <h3 style="font-size: 22px; color: #00d2ff; margin-bottom: 10px;">Guide Info Maroc</h3>
+            <p style="font-size: 16px; text-align: justify; margin-bottom: 15px;">
+              Une petite plateforme web répertoriant tous les programmes du cycle Master et Ingénierie au Maroc, pour aider les étudiants à accéder facilement aux informations.
+            </p>
+            <a href="https://guideinfo.netlify.app/" target="_blank" style="color: #ffa500; font-weight: 600; text-decoration: none; font-size: 16px;">Voir le projet</a>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const projectCards = content.querySelectorAll('div[style*="background: #0f2027"]');
+    projectCards.forEach(card => {
+        card.addEventListener('mouseover', () => {
+            card.style.transform = 'translateY(-10px) scale(1.02)';
+            card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.3)';
+        });
+        card.addEventListener('mouseout', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+            card.style.boxShadow = '0 4px 12px rgba(0,0,0,0.2)';
+        });
+    });
+}
+
+      });
+    });
+  </script>
+</body>
+</html>
