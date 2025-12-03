@@ -1,3 +1,5 @@
+# CV Dynamique de Adam AAKIF
+
 Ceci est un CV dynamique en ligne créé avec **HTML, CSS, JavaScript et Bootstrap**.
 
 ## Description
@@ -17,3 +19,6 @@ Ceci est un CV dynamique en ligne créé avec **HTML, CSS, JavaScript et Bootstr
 ## Contact
 - Email : adamaakif23@gmail.com  
 - GitHub : [github.com/ilittleaakif](https://github.com/ilittleaakif)
+
+## Note sur le GitHub
+Un commit a été fait avec un autre compte GitHub, donc deux comptes apparaissent comme collaborateurs sur la page du projet. Le problème vient de ce commit.
